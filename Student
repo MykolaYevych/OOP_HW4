@@ -1,0 +1,57 @@
+package com.gmail.nikolajievich;
+
+public class Student extends Human implements Comparable {
+
+	private int group;
+	private int course;
+
+	public Student(String name, String lastName, int age, String sex, int group, int course) {
+		super(name, lastName, age, sex);
+		this.group = group;
+		this.course = course;
+	}
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getGroup() {
+		return group;
+	}
+
+	public void setGroup(int group) {
+		this.group = group;
+	}
+
+	public int getCourse() {
+		return course;
+	}
+
+	public void setCourse(int course) {
+		this.course = course;
+	}
+	
+
+	@Override
+	public int compareTo(Object o) {
+		if (o == null) {
+			return -1;}
+			Student anS = (Student) o;
+			
+			return this.getLastName().compareToIgnoreCase(anS.getLastName());
+
+		}
+
+	@Override
+	public String toString() {
+		return "Student [group=" + group + ", course=" + course + ", getGroup()=" + getGroup() + ", getCourse()="
+				+ getCourse() + ", getName()=" + getName() + ", getLastName()=" + getLastName() + ", getAge()="
+				+ getAge() + ", getSex()=" + getSex() + ", toString()=" + super.toString() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+
+
+	
+
+}
