@@ -1,0 +1,7 @@
+package com.gmail.nikolajievich;
+
+public interface Voenkom {
+	
+	 Student[] findRecruit();
+
+}
