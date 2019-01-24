@@ -1,0 +1,83 @@
+package com.gmail.nikolajievich;
+
+public class Group implements Voenkom {
+
+	private Student[] studentArray = new Student[10];
+
+	public Group(Student[] studentArray) {
+		super();
+		this.studentArray = studentArray;
+	}
+
+	public Group() {
+		super();
+
+	}
+
+	@Override
+	public Student[] findRecruit() {
+		Student[] recruit;
+        int counter = 0;
+        for (int i = 0; i < studentArray.length; i++) {
+            try {
+                if (studentArray[i].getAge() > 18) {
+                    counter++;
+                }
+            } catch (NullPointerException e) {
+
+            }
+        }
+		return null;
+	}
+
+	public Student[] getStudentArray() {
+		return studentArray;
+	}
+
+	public void setStudentArray(Student[] studentArray) {
+		this.studentArray = studentArray;
+	}
+
+	public void add(Student student) {
+		for (int i = 0; i < studentArray.length; i++) {
+			try {
+				if (studentArray[i] == null)
+					studentArray[i] = student;
+				System.out.println("Student added");
+				return;
+			}
+
+			catch (NullPointerException e) {
+
+			}
+		}
+	}
+
+	public void remove(Student student) {
+		for (int i = 0; i < studentArray.length; i++) {
+			try {
+
+				if (studentArray[i].getLastName().equals(student.getLastName())
+						&& studentArray[i].getName().equals(student.getName()))
+
+					studentArray[i] = null;
+				System.out.println("Student removed");
+				return;
+			} catch (NullPointerException e) {
+
+			}
+		}
+	}
+
+	public Student search(Student student) {
+		for (int i = 0; i < studentArray.length; i++) {
+			if (studentArray[i].getLastName().equals(student.getLastName())) {
+				System.out.println("Student is found");
+				return studentArray[i];
+			}
+
+		}
+		return null;
+	}
+
+}
