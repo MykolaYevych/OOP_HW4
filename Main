@@ -1,0 +1,41 @@
+package com.gmail.nikolajievich;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Student student1 = new Student("Ivan", "Ivanov", 20, "man", 2, 2);
+		Student student2 = new Student("Stepan", "Stepanov", 19, "man", 1, 1);
+		Student student3 = new Student("Julia", "Sanina", 20, "wooman", 2, 2);
+		Student student4 = new Student("Tania", "Zukova", 21, "wooman", 1, 3);
+		Student student5 = new Student("Olga", "Zukovska", 22, "wooman", 2, 3);
+		Student student6 = new Student("Tania", "Zukova", 21, "wooman", 1, 3);
+		Student student7 = new Student("Jura", "Tepluj", 20, "man", 1, 3);
+		Student student8 = new Student("Kolja", "Jusyk", 18, "man", 1, 1);
+		Student student9 = new Student("Tania", "Kulova", 21, "wooman", 1, 2);
+		Student student10 = new Student("Mishf", "Kazik", 21, "man", 1, 3);
+
+		Group group1 = new Group();
+		
+		group1.add(student10);
+		group1.add(student8);
+		group1.add(student7);
+		group1.add(student5);
+		
+		
+		System.out.println(group1);
+
+		group1.remove(student8);
+		group1.remove(student5);
+
+		System.out.println(group1);
+		System.out.println(student5);
+		
+		
+
+	}
+
+}
+
+
+
